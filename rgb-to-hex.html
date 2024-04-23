@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="rgb-to-hex.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -16,23 +16,23 @@
     <main>
         <div>
             <h3>RGB</h3>
-            <form action="./rgb-to-hex.html">
+            <form id="rgb-input" action="./rgb-to-hex.html">
 
                 <label for="red">Red</label>
-                <input class="red-input" type="number" id="rgbInput" placeholder="Enter R value" min="0" max="255" step="1">
+                <input id="red-input" type="number" placeholder="Enter R value" min="0" max="255" step="1">
 
                 <label for="green">Green</label>
-                <input class="green-input"  type="number" id="rgbInput" placeholder="Enter G value" min="0" max="255" step="1">
+                <input id="green-input"  type="number" placeholder="Enter G value" min="0" max="255" step="1">
 
                 <label for="blue">Blue</label>
-                <input class="blue-input"  type="number" id="rgbInput" placeholder="Enter B value" min="0" max="255" step="1">
+                <input id="blue-input"  type="number" placeholder="Enter B value" min="0" max="255" step="1">
                 
-                <input type="submit">
+                <input type="submit" value="Convert">
             </form>
         </div>
 
         <form action="./hex-to-rgb.html">
-            <button class="swap" type="submit">Swap</button>
+            <button id="swap" type="submit">Swap</button>
         </form>
 
         <div>

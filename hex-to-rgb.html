@@ -10,27 +10,27 @@
 <body>
     
     <header>
-        <h1 class="title">Hex to RGB Converter</h1>
+        <h1 id="title">Hex to RGB Converter</h1>
     </header>
 
     <main>
         <div>
             <h3>Hex</h3>
-            <form action="./hex-to-rgb.html">
+            <form id="hex-input" action="./hex-to-rgb.html">
                 <input type="text" id="hexInput" placeholder="Enter Hex code">
-                <input type="submit">
+                <input type="submit" value="Convert">
             </form>
         </div>
 
         <form action="./rgb-to-hex.html">
-            <button class="swap" type="submit">Swap</button>
+            <button id="swap" type="submit">Swap</button>
         </form>
 
         <div>
             <h3>RGB</h3>
-            <input class="red-output" type="text" id="rgbOutput" placeholder="R value" readonly>
-            <input class="green-output"  type="text" id="rgbOutput" placeholder="G value" readonly>
-            <input class="blue-output"  type="text" id="rgbOutput" placeholder="B value" readonly>
+            <input id="red-output" type="text" placeholder="R value" readonly>
+            <input id="green-output"  type="text" placeholder="G value" readonly>
+            <input id="blue-output"  type="text" placeholder="B value" readonly>
         </div>
     </main>
 
