@@ -15,8 +15,18 @@
 
     <main>
         <div>
-            <h3>Hex</h3>
-            <input type="text" id="rgbInput" placeholder="Enter RGB code">
+            <h3>RGB</h3>
+            <form action="./rgb-to-hex.html">
+
+                <label for="red">Red</label>
+                <input class="red-input" type="number" id="rgbInput" placeholder="Enter R value" min="0" max="255" step="1">
+
+                <label for="green">Green</label>
+                <input class="green-input"  type="number" id="rgbInput" placeholder="Enter G value" min="0" max="255" step="1">
+
+                <label for="blue">Blue</label>
+                <input class="blue-input"  type="number" id="rgbInput" placeholder="Enter B value" min="0" max="255" step="1">
+            </form>
         </div>
 
         <form action="./hex-to-rgb.html">
@@ -24,7 +34,7 @@
         </form>
 
         <div>
-            <h3>RGB</h3>
+            <h3>Hex</h3>
             <input type="text" id="hexOutput" placeholder="Hex value" readonly>
         </div>
     </main>
