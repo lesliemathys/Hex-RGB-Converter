@@ -4,6 +4,9 @@ let blueVal = document.getElementById('blue-input');
 let hexOutput = document.getElementById('hexOutput')
 
 const rgbValues = [];
+const hexValues = [];
+const decimalSixteens = [];
+const decimalOnes = [];
 const hexSixteens = [];
 const hexOnes = [];
 const rgbInputs = document.getElementById('convert-to-hex');
@@ -13,10 +16,12 @@ rgbInputs.addEventListener('click', function(){
 
     // check if array is empty. If so add inputs to it afresh
     if (rgbValues === 0){
-
         rgbValues.push(redVal.value, greenVal.value, blueVal.value);
-        calculateSixteens()
-        calculateOnes()
+        calculateDecimalSixteens()
+        calculateDecimalOnes()
+        calculateHexSixteens()
+        calculateHexOnes()
+        hexValues.push(hexSixteens[0], hexOnes[0],hexSixteens[1], hexOnes[1],hexSixteens[2], hexOnes[2]);
     } 
     
     // if array is not empty, create a new array that replaces the rgbValues array
@@ -24,25 +29,45 @@ rgbInputs.addEventListener('click', function(){
         const replacementRgbValues = [];
         replacementRgbValues.push(redVal.value, greenVal.value, blueVal.value);
         rgbValues.splice(0, 3, ...replacementRgbValues)
-        calculateSixteens()
-        calculateOnes()
+        calculateDecimalSixteens()
+        calculateDecimalOnes()
+        calculateHexSixteens()
+        calculateHexOnes()
+        hexValues.push(hexSixteens[0], hexOnes[0],hexSixteens[1], hexOnes[1],hexSixteens[2], hexOnes[2]);
     }
 
-    hexOutput.value = rgbValues[0];
-
+    // console.log(decimalSixteens);
+    console.log(decimalOnes);
+    // console.log(hexSixteens);
+    console.log(hexOnes);
+    //console.log(hexValues);
     }
 );
 
 // divide rgb value by 16 to give how many sixteens. this will be used to query hex key to give first part of each hex code segment (#x_x_x_)
-function calculateSixteens(){
+function calculateDecimalSixteens(){
     for (let i =0; i < rgbValues.length; i++) {
-        hexSixteens.push(Math.floor(rgbValues[i] / 16));
+        decimalSixteens.push(Math.floor(rgbValues[i] / 16));
     }
 }
 
 // calculate how many ones are in the rgb value, this will be used to query hex key to give second part of each hex code segment (#_x_x_x)
-function calculateOnes(){
+function calculateDecimalOnes(){
     for (let i =0; i < rgbValues.length; i++) {
-        hexOnes.push(rgbValues[i] - (hexSixteens[i] * 16));
+        decimalOnes.push(rgbValues[i] - (decimalSixteens[i] * 16));
+    }
+}
+
+// convert every decimal 'sixteen' element in the decimalSixteens array to its hexadecimal equivalent
+function calculateHexSixteens(){
+    for (let i =0; i < decimalSixteens.length; i++){
+        hexSixteens.push(decimalSixteens[i].toString(16));
+    }
+}
+
+// convert every decimal 'one' element in the decimalSixteens array to its hexadecimal equivalent
+function calculateHexOnes(){
+    for (let i =0; i < decimalOnes.length; i++){
+        hexOnes.push(decimalOnes[i].toString(16));
     }
 }
