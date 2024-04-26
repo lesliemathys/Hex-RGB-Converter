@@ -28,6 +28,7 @@ rgbInputs.addEventListener('click', function(){
     // if array is not empty, create a new array that replaces the rgbValues array
     else {
 
+        // if someone is submitting another round of colours, clear all arrays, ready to accept new values
         rgbValues.length = 0;
         hexValues.length = 0;
         decimalSixteens.length = 0;
