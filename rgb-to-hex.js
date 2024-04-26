@@ -35,10 +35,7 @@ rgbInputs.addEventListener('click', function(){
         hexSixteens.length = 0;
         hexOnes.length = 0;
 
-        //const replacementRgbValues = [];
         rgbValues.push(redVal.value, greenVal.value, blueVal.value);
-        // replacementRgbValues.push(redVal.value, greenVal.value, blueVal.value);
-        // rgbValues.splice(0, 3, ...replacementRgbValues)
         calculateDecimalSixteens()
         calculateDecimalOnes()
         calculateHexSixteens()
