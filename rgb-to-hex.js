@@ -27,9 +27,18 @@ rgbInputs.addEventListener('click', function(){
     
     // if array is not empty, create a new array that replaces the rgbValues array
     else {
-        const replacementRgbValues = [];
-        replacementRgbValues.push(redVal.value, greenVal.value, blueVal.value);
-        rgbValues.splice(0, 3, ...replacementRgbValues)
+
+        rgbValues.length = 0;
+        hexValues.length = 0;
+        decimalSixteens.length = 0;
+        decimalOnes.length = 0;
+        hexSixteens.length = 0;
+        hexOnes.length = 0;
+
+        //const replacementRgbValues = [];
+        rgbValues.push(redVal.value, greenVal.value, blueVal.value);
+        // replacementRgbValues.push(redVal.value, greenVal.value, blueVal.value);
+        // rgbValues.splice(0, 3, ...replacementRgbValues)
         calculateDecimalSixteens()
         calculateDecimalOnes()
         calculateHexSixteens()
@@ -37,13 +46,7 @@ rgbInputs.addEventListener('click', function(){
         hexValues.push(hexSixteens[0], hexOnes[0],hexSixteens[1], hexOnes[1],hexSixteens[2], hexOnes[2]);
         hexOutput.value = hexValues.join('').toUpperCase();
     }
-
-    // console.log(decimalSixteens);
-    //console.log(decimalOnes);
-    // console.log(hexSixteens);
-    //console.log(hexOnes);
-    console.log(hexValues);
-    }
+}
 );
 
 // divide rgb value by 16 to give how many sixteens. this will be used to query hex key to give first part of each hex code segment (#x_x_x_)
