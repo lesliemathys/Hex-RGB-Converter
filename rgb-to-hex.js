@@ -22,6 +22,7 @@ rgbInputs.addEventListener('click', function(){
         calculateHexSixteens()
         calculateHexOnes()
         hexValues.push(hexSixteens[0], hexOnes[0],hexSixteens[1], hexOnes[1],hexSixteens[2], hexOnes[2]);
+        hexOutput.value = hexValues.join('').toUpperCase();
     } 
     
     // if array is not empty, create a new array that replaces the rgbValues array
@@ -34,13 +35,14 @@ rgbInputs.addEventListener('click', function(){
         calculateHexSixteens()
         calculateHexOnes()
         hexValues.push(hexSixteens[0], hexOnes[0],hexSixteens[1], hexOnes[1],hexSixteens[2], hexOnes[2]);
+        hexOutput.value = hexValues.join('').toUpperCase();
     }
 
     // console.log(decimalSixteens);
-    console.log(decimalOnes);
+    //console.log(decimalOnes);
     // console.log(hexSixteens);
-    console.log(hexOnes);
-    //console.log(hexValues);
+    //console.log(hexOnes);
+    console.log(hexValues);
     }
 );
 
