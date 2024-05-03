@@ -9,42 +9,44 @@
 </head>
 <body>
     
-    <header>
-        <h1 class="title">RGB to Hex Converter</h1>
+    <header class="header">
+            <h1 class="title">RGB to Hex Converter</h1>
     </header>
 
     <main>
-        <div>
-            <h3>RGB</h3>
+        <div class="rgb-container">
 
-            <label for="red">Red</label>
-            <input id="red-input" type="number" placeholder="Enter R value" min="0" max="255" step="1">
+            <div>
+                <label for="red">Red</label>
+                <input id="red-input" type="number" placeholder="255">
+            </div>
 
-            <label for="green">Green</label>
-            <input id="green-input"  type="number" placeholder="Enter G value" min="0" max="255" step="1">
+            <div>
+                <label for="green">Green</label>
+                <input id="green-input"  type="number" placeholder="255">
+            </div>
 
-            <label for="blue">Blue</label>
-            <input id="blue-input"  type="number" placeholder="Enter B value" min="0" max="255" step="1">
-            
-            <button type="button" id="convert-to-hex">Convert</button>
+            <div>
+                <label for="blue">Blue</label>
+                <input id="blue-input"  type="number" placeholder="255">
+                <button type="button" id="convert-to-hex">Convert</button>    
+            </div>
+
         </div>
+
+        <div class="hex-container">
+            <label for="hex">Hex</label>
+            <input type="text" id="hexOutput" placeholder="Hex value" readonly>
+            <button type="button" id="copy-code">Copy</button>    
+        </div>
+
 
         <form action="./hex-to-rgb.html">
             <button id="swap" type="submit">Swap</button>
         </form>
 
-        <div>
-            <h3>Hex</h3>
-            <input type="text" id="hexOutput" placeholder="Hex value" readonly>
-        </div>
+
     </main>
-
-    <footer>
-        <div>
-            <a href="http://x.com/lesliemathys">@LeslieMathys</a>
-        </div>
-    </footer>
-
 
 </body>
 </html>
