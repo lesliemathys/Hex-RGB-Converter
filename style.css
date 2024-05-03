@@ -35,7 +35,8 @@ label {
     padding-right: 0.25rem;
 }
 
-#red-input, #green-input, #blue-input, #hexOutput {
+input {
+    padding-left: 0.15rem;
     margin-right: 0.75rem;
 }
 
@@ -46,14 +47,17 @@ label {
     justify-content: center;
 }
 
-.rgb-container, .hex-container {
+.rgb-input-container, 
+.hex-output-container, 
+.hex-input-container,
+.rgb-output-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
 
 }
 
-.rgb-container {
+.rgb-input-container, .hex-input-container {
     padding-bottom: 5rem;
 }
 
@@ -64,5 +68,3 @@ label {
     width: 100%;
     text-align: left;
 }
-
-label 
