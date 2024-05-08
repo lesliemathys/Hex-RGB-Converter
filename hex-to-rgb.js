@@ -50,7 +50,4 @@ function copyCode(){
 
     // Copy the text inside the text field
     navigator.clipboard.writeText(code.value);
-
-    // Alert the copied text
-    alert("Copied the text: " + code.value);
 }
