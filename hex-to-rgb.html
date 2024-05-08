@@ -11,13 +11,13 @@
 <body>
     
     <header class="header">
-        <h1 id="title">Hex to RGB Converter</h1>
+        <h1 id="title">Hex To RGB Converter</h1>
     </header>
 
     <main>
         <div class="hex-input-container">
             <label for="hex">Hex</label>
-            <input id="hex-input" type="text" placeholder="Enter Hex value" required>
+            <input id="hex-input" type="text" placeholder="Enter Hex Value" maxlength="6" autocomplete="off" required>
             <button type="button" id="convert-to-rgb">Convert</button>
         </div>
 
@@ -32,8 +32,8 @@
 
         <div class="rgb-output-container">
             <label for="rgb">RGB</label>
-            <input id="rgb-output" type="text" placeholder="RGB output" readonly>
-            <button type="button" id="copy-code">Copy</button>    
+            <input id="converted-output" type="text" placeholder="RGB Output" readonly>
+            <button onclick="copyCode()" type="button" id="copy-code">Copy</button>    
         </div>
     </main>
 

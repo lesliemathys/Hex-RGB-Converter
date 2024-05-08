@@ -1,7 +1,7 @@
 let redVal = document.getElementById('red-input');
 let greenVal = document.getElementById('green-input');
 let blueVal = document.getElementById('blue-input');
-let hexOutput = document.getElementById('hexOutput')
+let hexOutput = document.getElementById('converted-output')
 
 const rgbValues = [];
 const hexValues = [];
@@ -73,4 +73,17 @@ function calculateHexOnes(){
     for (let i =0; i < decimalOnes.length; i++){
         hexOnes.push(decimalOnes[i].toString(16));
     }
+}
+
+function copyCode(){
+    let code = document.getElementById('converted-output');
+    // Select the text field
+    code.select();
+    code.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(code.value);
+
+    // Alert the copied text
+    alert("Copied the text: " + code.value);
 }

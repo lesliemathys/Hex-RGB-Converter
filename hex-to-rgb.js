@@ -1,5 +1,5 @@
 let hexValue = document.getElementById('hex-input');
-let rgbOutput = document.getElementById('rgb-output');
+let rgbOutput = document.getElementById('converted-output');
 let hexCode = [];
 
 const hexInput = document.getElementById('convert-to-rgb')
@@ -40,4 +40,17 @@ function convertInputsToDecimal(){
     for (let i = 0; i < hexArray.length; i++){
         rgbArray.push(parseInt(hexArray[i], 16));
     }
+}
+
+function copyCode(){
+    let code = document.getElementById('converted-output');
+    // Select the text field
+    code.select();
+    code.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(code.value);
+
+    // Alert the copied text
+    alert("Copied the text: " + code.value);
 }
